@@ -36,9 +36,9 @@ const PORT = 4001;
 //que se ejecuta una vez que el servidor está corriendo 
 //y listo para recibir peticiones.
 // Iniciando el servidor...
-app.listen(process.env.PORT, function () {
+var server = app.listen(process.env.PORT, function () {
     console.log('Escuchando en el puerto ' + server.address().port);
-});
+  });
 
 
 
