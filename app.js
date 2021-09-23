@@ -35,8 +35,8 @@ app.use('/v1', require('./routes'));
 //que se ejecuta una vez que el servidor está corriendo 
 //y listo para recibir peticiones.
 // Iniciando el servidor...
-var server = app.listen(process.env.PORT, function () {
-    console.log('Escuchando en el puerto ' + server.address().port);
+app.listen(process.env.PORT, function () {
+    console.log('Escuchando en el puerto ' + process.env.PORT);
   });
 
 
