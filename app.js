@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 //Configuracion de la Base de datos
 const mongoose = require("mongoose");
 
-var isProduction = process.env.NODE_ENV === 'production';
+//var isProduction = process.env.NODE_ENV === 'production';
 
 mongoose.connect(
     process.env.MONGODB_URI, // obtiene la url de conexión desde las variables de entorno
@@ -30,7 +30,6 @@ require('./config/passport')
 app.use('/v1', require('./routes'));
 
 //Inicialización del servidor
-const PORT = 4001;
 //como primer parámetro de listen() le pasamos el puerto 
 //que va a estar escuchando y como segundo un callback 
 //que se ejecuta una vez que el servidor está corriendo 
